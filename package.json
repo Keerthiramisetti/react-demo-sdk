@@ -1,0 +1,27 @@
+{
+  "name": "react-demo-sdk",
+  "version": "1.0.6",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src --out-dir dist && copyfiles -u 1 'src/**/*.css' dist"
+  },
+  "author": "ansh",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.25.9",
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.25.9",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "css-loader": "^7.1.2",
+    "style-loader": "^4.0.0"
+  }
+}
