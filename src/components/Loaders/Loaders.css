@@ -1,0 +1,418 @@
+/* Import Google Fonts for Montserrat */
+/* @import url('https://fonts.googleapis.com/css?family=Montserrat'); */
+
+* {
+    box-sizing: border-box;
+}
+
+/* Vertical Bars Loader */
+#vertical-loading-bars {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 2em;
+  }
+  
+  #vertical-loading-bars span {
+    width: 0.3em;
+    height: 1em;
+    background-color: #789;
+  }
+  
+  #vertical-loading-bars span:nth-of-type(1) {
+    animation: grow 1s -0.45s ease-in-out infinite;
+  }
+  
+  #vertical-loading-bars span:nth-of-type(2) {
+    animation: grow 1s -0.3s ease-in-out infinite;
+  }
+  
+  #vertical-loading-bars span:nth-of-type(3) {
+    animation: grow 1s -0.15s ease-in-out infinite;
+  }
+  
+  #vertical-loading-bars span:nth-of-type(4) {
+    animation: grow 1s ease-in-out infinite;
+  }
+  
+  @keyframes grow {
+    0%, 100% { transform: scaleY(1); }
+    50% { transform: scaleY(2); }
+  }
+  
+  /* Ball Loader */
+  .newtons-cradle {
+    width: 4em;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .newtons-cradle div {
+    width: 0.8em;
+    height: 0.8em;
+    border-radius: 50%;
+    background-color: #fc2f70;
+  }
+  
+  .newtons-cradle div:nth-of-type(1) {
+    transform: translateX(-100%);
+    animation: left-swing 0.5s ease-in alternate infinite;
+  }
+  
+  .newtons-cradle div:nth-of-type(3) {
+    transform: translateX(-95%);
+    animation: right-swing 0.5s ease-out alternate infinite;
+  }
+  
+  @keyframes left-swing {
+    50%, 100% { transform: translateX(95%); }
+  }
+  
+  @keyframes right-swing {
+    50% { transform: translateX(-95%); }
+    100% { transform: translateX(100%); }
+  }
+  
+  /* Steady Spinner */
+  #steady-spinner {
+    border: 3px solid hsla(185, 100%, 62%, 0.2);
+    border-top-color: #09e;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Classic Dots */
+  .classic-dots {
+    width: 3.5em;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .classic-dots div {
+    width: 0.8em;
+    height: 0.8em;
+    border-radius: 50%;
+    background-color: #666;
+    animation: fade 0.8s ease-in-out alternate infinite;
+  }
+  
+  .classic-dots div:nth-of-type(1) {
+    animation-delay: -0.4s;
+  }
+  
+  .classic-dots div:nth-of-type(2) {
+    animation-delay: -0.2s;
+  }
+  
+  @keyframes fade {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+  
+  /* Catch-Up Spinner */
+  svg#catchup-spinner {
+    width: 3.75em;
+    transform-origin: center;
+    animation: rotate 2s linear infinite;
+    max-width: 5em;
+    display: block;
+  }
+  
+  svg#catchup-spinner circle {
+    fill: none;
+    stroke: #7c7;
+    stroke-width: 2;
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    animation: dash 1.5s ease-in-out infinite;
+  }
+  
+  @keyframes rotate {
+    100% { transform: rotate(360deg); }
+  }
+  
+  @keyframes dash {
+    0% { stroke-dasharray: 1, 200; stroke-dashoffset: 0; }
+    50% { stroke-dasharray: 90, 200; stroke-dashoffset: -35px; }
+    100% { stroke-dashoffset: -125px; }
+  }
+  
+  /* Dot Grid Loader */
+  .dot-grid-loader {
+    width: 3em;
+    height: 3em;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+  
+  .dot-grid-loader > div {
+    width: 0.5em;
+    height: 0.5em;
+    background-color: purple;
+    border-radius: 50%;
+    animation: fade 1.5s alternate ease-in-out infinite;
+  }
+  
+  .dot-grid-loader > div:nth-of-type(2),
+  .dot-grid-loader > div:nth-of-type(4) {
+    animation-delay: 0.25s;
+  }
+  
+  .dot-grid-loader > div:nth-of-type(3),
+  .dot-grid-loader > div:nth-of-type(5),
+  .dot-grid-loader > div:nth-of-type(7) {
+    animation-delay: 0.5s;
+  }
+  
+  .dot-grid-loader > div:nth-of-type(6),
+  .dot-grid-loader > div:nth-of-type(8) {
+    animation-delay: 0.75s;
+  }
+  
+  .dot-grid-loader > div:nth-of-type(9) {
+    animation-delay: 1s;
+  }
+  
+  @keyframes fade {
+    to { opacity: 0.2; }
+  }
+  
+  /* Sci-Fi Loader */
+  .sci-fi-loader {
+    position: relative;
+    max-width: 3em;
+  }
+  
+  .outer, .middle, .inner {
+    border: 3px solid transparent;
+    border-top-color: #17c;
+    border-right-color: #17c;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  
+  .outer {
+    width: 3.5em;
+    height: 3.5em;
+    margin-left: -1.75em;
+    margin-top: -1.75em;
+    animation: spin 2s linear infinite;
+  }
+  
+  .middle {
+    width: 2.1em;
+    height: 2.1em;
+    margin-left: -1.05em;
+    margin-top: -1.05em;
+    animation: spin 1.75s linear reverse infinite;
+  }
+  
+  .inner {
+    width: 0.8em;
+    height: 0.8em;
+    margin-left: -0.4em;
+    margin-top: -0.4em;
+    animation: spin 1.5s linear infinite;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+
+  /* Fade Dot Loader */
+.fade-dots {
+    display: flex;
+    justify-content: space-between;
+    width: 4em;
+  }
+  
+  .fade-dots div {
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: #666;
+    animation: fade 1s infinite ease-in-out;
+  }
+  
+  .fade-dots div:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .fade-dots div:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+  
+  .fade-dots div:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  
+  @keyframes fade {
+    0%, 100% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  /* HorizontalBarLoader CSS */
+.horizontal-bar {
+    width: 100%;
+    height: 0.5em;
+    background-color: #ddd;
+    position: relative;
+  }
+  
+  .horizontal-bar span {
+    display: block;
+    width: 0%;
+    height: 100%;
+    background-color: #4caf50; /* Can be customized */
+    animation: fill 2s infinite ease-in-out;
+  }
+  
+  @keyframes fill {
+    0% {
+      width: 0%;
+    }
+    50% {
+      width: 100%;
+    }
+    100% {
+      width: 0%;
+    }
+  }
+  
+
+  /* spinner loader  */
+  .spinner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+}
+
+.spinner-sector {
+    border-radius: 50%;
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    border: 15px solid transparent;
+    mix-blend-mode: overlay;
+}
+
+.spinner-text {
+    animation: loading-opacity 3s ease-in-out infinite;
+    font-size: 2em;
+}
+
+.spinner-sector-blue {
+    animation: rotate 2s ease-out infinite;
+    border-top: 15px solid lightblue;
+}
+
+.spinner-sector-red {
+    animation: rotate 2.5s ease-in infinite;
+    border-top: 15px solid lightcoral;
+}
+
+.spinner-sector-green {
+    animation: rotate 1.5s ease-in-out infinite;
+    border-top: 15px solid lightgreen;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes loading-opacity {
+    0%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: .5;
+    }
+    50% {
+        opacity: .1;
+    }
+}
+
+/* Container for the loader */
+.circle-loader {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  
+  /* Container for all the bars */
+  .bars-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: rotate(45deg);
+  }
+  
+  /* Styling for each individual bar */
+  .bar {
+    width: 0.2em;
+    height: 30%;
+    background-color: #789;
+    animation: grow 1s ease-in-out infinite;
+  }
+  
+  /* Keyframes for grow animation */
+  @keyframes grow {
+    0%, 100% {
+      transform: scaleY(1);
+    }
+    50% {
+      transform: scaleY(2);
+    }
+  }
+  
+  /* Apply different delays for each bar */
+  .bars-container .bar:nth-of-type(1) {
+    animation-delay: -0.45s;
+  }
+  
+  .bars-container .bar:nth-of-type(2) {
+    animation-delay: -0.3s;
+  }
+  
+  .bars-container .bar:nth-of-type(3) {
+    animation-delay: -0.15s;
+  }
+  
+  .bars-container .bar:nth-of-type(4) {
+    animation-delay: 0s;
+  }
+  

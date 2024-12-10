@@ -1,0 +1,56 @@
+/* CustomBadge.css */
+
+/* General styling for the container */
+.custom-badge-container {
+  display: inline-block;
+  position: relative;
+  padding: 5px;
+}
+
+/* Custom styles for the Badge */
+.custom-badge .p-badge {
+  font-size: 14px;
+  padding: 5px 10px; 
+  border-radius: 50%; 
+  min-width: 25px; 
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-badge .p-badge-success {
+  background-color: #28a745; /* Green color for success */
+  color: white; /* White text */
+}
+
+.custom-badge .p-badge-info {
+  background-color: #17a2b8; /* Blue color for info */
+  color: white; /* White text */
+}
+
+.custom-badge .p-badge-warning {
+  background-color: #ffc107; /* Yellow color for warning */
+  color: black; /* Black text */
+}
+
+.custom-badge .p-badge-danger {
+  background-color: #dc3545; /* Red color for danger */
+  color: white; /* White text */
+}
+
+/* Small badge for smaller sizes */
+.custom-badge.small .p-badge {
+  font-size: 10px;
+  padding: 2px 5px;
+  min-width: 20px;
+  height: 20px;
+}
+
+/* Large badge */
+.custom-badge.large .p-badge {
+  font-size: 18px;
+  padding: 10px 15px;
+  min-width: 35px;
+  height: 35px;
+}

@@ -1,0 +1,95 @@
+/* src/Tooltip.css */
+.tooltip-container {
+  display: inline-block;
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.9) 100%); /* Gradient background */
+  color: white;
+  border-radius: 8px; /* Rounded corners */
+  padding: 15px 20px; /* More padding for better readability */
+  font-size: 16px; /* Larger font size */
+  min-width: 150px; /* Minimum width */
+  max-width: 250px; /* Max width */
+  text-align: center;
+  box-sizing: border-box;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s;
+  z-index: 1000; /* Ensure the tooltip is on top of other elements */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  pointer-events: none; /* Prevent the tooltip from interfering with mouse events */
+}
+
+.tooltip-container:hover .tooltip,
+.tooltip-container.clicked .tooltip {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Arrow (Triangle) */
+.tooltip::before {
+  content: '';
+  position: absolute;
+  border-style: solid;
+}
+
+.tooltip-top::before {
+  border-width: 8px 8px 0;
+  border-color: rgba(0, 0, 0, 0.75) transparent transparent transparent;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip-right::before {
+  border-width: 8px 0 8px 8px;
+  border-color: transparent transparent transparent rgba(0, 0, 0, 0.75);
+  top: 50%;
+  left: -8px;
+  transform: translateY(-50%);
+}
+
+.tooltip-bottom::before {
+  border-width: 0 8px 8px;
+  border-color: transparent transparent rgba(0, 0, 0, 0.75) transparent;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip-left::before {
+  border-width: 8px 8px 8px 0;
+  border-color: transparent rgba(0, 0, 0, 0.75) transparent transparent;
+  top: 50%;
+  right: -8px;
+  transform: translateY(-50%);
+}
+
+/* Positioning */
+.tooltip-top {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip-right {
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+}
+
+.tooltip-bottom {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip-left {
+  top: 50%;
+  right: 100%;
+  transform: translateY(-50%);
+}

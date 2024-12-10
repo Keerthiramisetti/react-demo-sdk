@@ -1,0 +1,87 @@
+/* .avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    overflow: hidden;
+    font-weight: bold;
+  }
+  
+  .avatar-border {
+    border: 2px solid #fff;
+  }
+  
+  .avatar-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .avatar-initials {
+    display: inline-block;
+    text-transform: uppercase;
+  }
+   */
+
+/* Base styles for Avatar */
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white; /* Default text color for initials */
+  font-weight: bold;
+  overflow: hidden;
+  font-size: inherit; /* Inherit the font size from the inline styles */
+  text-transform: uppercase;
+  background-color: #007bff; /* Default color (blue) if no custom color is provided */
+}
+
+/* Avatar Border (optional) */
+.avatar-border {
+  border: 2px solid #fff; /* White border around avatar */
+}
+
+/* Avatar image styling */
+.avatar-image {
+  width: 100%;
+  /* height: 100%; */
+  object-fit: cover;
+}
+
+/* Avatar initials styling */
+.avatar-initials {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 0 8px;
+  text-align: center;
+}
+
+/* Shape styles */
+.avatar-circle {
+  border-radius: 50%;
+}
+
+.avatar-square {
+  border-radius: 0; /* Square shape has no rounded corners */
+}
+
+/* Predefined Sizes (for small, medium, large) */
+.avatar-small {
+  width: 40px;
+  height: 40px;
+  font-size: 14px;
+}
+
+.avatar-medium {
+  width: 60px;
+  height: 60px;
+  font-size: 18px;
+}
+
+.avatar-large {
+  width: 80px;
+  height: 80px;
+  font-size: 22px;
+}

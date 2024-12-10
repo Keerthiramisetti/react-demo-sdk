@@ -1,0 +1,363 @@
+.list-container {
+  width: 80%;
+  margin: 20px auto;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.list-container.dark-mode {
+  background-color: #333;
+  color: white;
+}
+
+/* Controls (search bar, items per page select, CSV export, etc.) */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.controls input {
+  padding: 8px;
+  font-size: 14px;
+  width: 200px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.controls select {
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.controls button {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+}
+
+.controls button:hover {
+  background-color: #0056b3;
+}
+
+.controls button:disabled {
+  background-color: #ccc;
+}
+
+.custom-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.custom-list.ordered {
+  list-style-type: decimal;
+}
+
+.custom-list.unordered {
+  list-style-type: disc;
+}
+
+.custom-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-list li.selected {
+  background-color: #d4edda;
+}
+
+.custom-list li:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.item-icon {
+  margin-right: 10px;
+  font-size: 20px;
+  color: #007bff;
+}
+
+/* Expanded content for each item */
+.expanded-content {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+/* Pagination Styling */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid #007bff;
+  background-color: #007bff;
+  color: white;
+  margin: 0 5px;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination input {
+  width: 50px;
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Search Bar Styling */
+.controls input::placeholder {
+  font-style: italic;
+  color: #aaa;
+}
+
+/* Dark Mode Specific Styles */
+.list-container.dark-mode .custom-list li {
+  background-color: #444;
+  border: 1px solid #555;
+}
+
+.list-container.dark-mode .custom-list li:hover {
+  background-color: #555;
+}
+
+.list-container.dark-mode .controls input,
+.list-container.dark-mode .controls select,
+.list-container.dark-mode .controls button {
+  background-color: #222;
+  color: white;
+  border: 1px solid #555;
+}
+
+.list-container.dark-mode .controls input::placeholder {
+  color: #ccc;
+}
+
+/* List Item and Toggle Icons */
+button {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  color: #007bff;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  color: #aaa;
+}
+
+/* Hover effects */
+.custom-list li:hover {
+  background-color: #f7f7f7;
+  transform: scale(1.02);
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pagination button {
+  background-color: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background-color: #0056b3;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination input {
+  padding: 5px;
+  width: 50px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin: 0 5px;
+}
+
+
+/* Common list styles */
+.custom-list {
+  padding: 0;
+  margin: 0;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.list-item.selected {
+  background-color: #f0f0f0;
+}
+
+/* Ordered list specific styles */
+.ordered-list {
+  list-style-type: decimal;
+  margin-left: 20px;
+}
+
+.ordered-list .list-item {
+  margin-left: 10px; /* Add indentation for ordered list items */
+}
+
+/* Unordered list specific styles */
+.unordered-list {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.unordered-list .list-item {
+  margin-left: 10px; /* Add indentation for unordered list items */
+}
+
+/* Chevron icon and expand button */
+.expand-button {
+  margin-left: auto;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.expand-button svg {
+  transition: transform 0.3s ease;
+}
+
+.expand-button:hover svg {
+  transform: scale(1.2);
+}
+
+/* Item icon (check/uncheck circle) */
+.item-icon {
+  margin-right: 10px;
+}
+
+/* Styling for dark mode */
+.dark-mode {
+  background-color: #333;
+  color: white;
+}
+
+.dark-mode .list-item {
+  border-color: #444;
+}
+
+/* Pagination and controls */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.pagination input {
+  width: 40px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ordered-list {
+  padding-left: 20px;
+}
+
+.unordered-list {
+  padding-left: 20px;
+}
+
+.list-item-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.expand-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.selected {
+  background-color: #dcdcdc;
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination input {
+  width: 50px;
+}
+
