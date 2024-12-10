@@ -3,25 +3,18 @@
 
 A comprehensive collection of customizable and functional UI components for React applications.
 
-This library provides buttons, checkboxes, dropdowns, graphs, icons, input fields, lists, loaders, progress bars, radio buttons, tables, text areas, toggle switches, tooltips, and more. 
+This library provides graphs, icons, lists, loaders, progress bars, tables, and more. 
 
 Easily install this package and integrate these ready-to-use components in your React projects.
 
 FEATURES : 
 
-Button: Customizable buttons with different sizes, colors, icons and click handlers.
-Checkbox: Provides single or multiple checkbox options.
-Dropdown: Create dropdown menus with dynamic items.
 Graph: Render interactive graphs and charts, along with visualizing the records on hovering at the particular record.
 Icon: Use predefined icons with the property names mentioned.
-Input Field: Text, email, password, etc input fields with validation support.
 List: Render dynamic lists with various styles and options.
 Loader: Show loading indicators during asynchronous operations.
 Progress Bar: Display progress in tasks or operations.
-Radio Button: Grouped radio buttons with flexible choices.
 Table: Tabular data display with customizable columns and rows, and features to select the records per page, pagination, etc.
-Text Area: Multi-line input field with auto-resize feature.
-Toggle Switch: Implement toggles for boolean values.
 Tooltip: Add tooltips to any element to provide extra information.
 
 
