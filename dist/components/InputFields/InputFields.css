@@ -1,0 +1,94 @@
+/* Basic Input Styles */
+.input-container {
+    position: relative;
+    margin-bottom: 1rem;
+  }
+  
+  .form-outline {
+    position: relative;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    transition: border-color 0.3s;
+  }
+  
+  .input:focus {
+    border-color: #007bff;
+  }
+  
+  .input.error {
+    border-color: #dc3545;
+  }
+  
+  .input.disabled {
+    background-color: #f1f1f1;
+  }
+  
+  .input.large {
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .input.small {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+  
+  .input-icon-left {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .icon-right {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .input-loading {
+    font-size: 0.875rem;
+    color: #007bff;
+    margin-top: 0.5rem;
+  }
+  
+  .input-label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .form-helper {
+    font-size: 0.875rem;
+    color: #6c757d;
+  }
+  
+  .error-message {
+    font-size: 0.875rem;
+    color: #dc3545;
+  }
+  
+  .char-counter {
+    font-size: 0.75rem;
+    color: #6c757d;
+  }
+  
+  /* Dark Mode Styles */
+  .dark-bg .input {
+    background-color: #343a40;
+    color: #f8f9fa;
+    border-color: #6c757d;
+  }
+  
+  .dark-bg .input:focus {
+    border-color: #007bff;
+  }
+  

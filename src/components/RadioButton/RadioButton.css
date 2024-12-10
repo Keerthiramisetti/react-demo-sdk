@@ -1,0 +1,26 @@
+.radio-button-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .radio-button-label {
+    margin-left: 0.5rem;
+  }
+  
+  .radio-button-input {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .radio-button-container.disabled .radio-button-input {
+    cursor: not-allowed;
+  }
+  
+  .radio-button-container.disabled .radio-button-label {
+    color: #b5b5b5;
+  }
+  
+  .radio-button-input:disabled {
+    cursor: not-allowed;
+  }
+  

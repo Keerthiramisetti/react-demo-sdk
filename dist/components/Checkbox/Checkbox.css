@@ -1,3 +1,22 @@
+/* .custom-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.custom-checkbox input[type='checkbox'] {
+    accent-color: blue;
+}
+
+.checkbox-label {
+    font-size: 16px;
+    color: #333;
+} */
+
+
+
+/* Checkbox Styles */
 /* Checkbox Styles */
 .checkbox-group {
   font-family: Arial, sans-serif;
